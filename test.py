@@ -4,6 +4,6 @@ from google import genai
 client = genai.Client(api_key="API KEY")
 
 response = client.models.generate_content(
-    model="gemini-2.5-flash", contents="Sapa aku jika ini sudah berhasil"
+    model="gemini-2.5-flash", contents="Tell me about bitcoin"
 )
 print(response.text)
