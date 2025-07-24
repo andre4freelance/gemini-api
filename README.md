@@ -1,15 +1,28 @@
 # gemini-api
 
+## Setup
 
-Create env
+### Create Virtual Environment
+
+```bash
 python3 -m venv ~/.venv/gemini-api
+```
 
-Activate env
+### Activate Virtual Environment
+
+```bash
 source ~/.venv/gemini-api/bin/activate.fish
+```
 
-Deactive env
+### Deactivate Virtual Environment
+
+```bash
 deactivate
+```
 
-Dependencies
+## Install Dependencies
+
+```bash
 pip install -q -U google-genai
 pip install google-generativeai python-dotenv Pillow requests
+```
