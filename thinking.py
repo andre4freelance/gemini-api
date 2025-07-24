@@ -1,7 +1,10 @@
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
 
-client = genai.Client(api_key="API KEY")
+# Inisialisasi client
+load_dotenv()
+client = genai.Client()
 
 response = client.models.generate_content(
     model="gemini-2.5-flash",

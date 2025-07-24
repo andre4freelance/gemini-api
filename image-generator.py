@@ -3,8 +3,11 @@ from google.genai import types
 from PIL import Image
 from io import BytesIO
 import base64
+from dotenv import load_dotenv
 
-client = genai.Client(api_key="API KEY")
+# Inisialisasi client
+load_dotenv()
+client = genai.Client()
 
 contents = ('Hi, can you create a 3d rendered image of a pig '
             'with wings and a top hat flying over a happy '
