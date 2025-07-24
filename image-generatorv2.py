@@ -1,18 +1,18 @@
 from google import genai
-from googAle.genai import types
+from google.genai import types
 from PIL import Image
 from io import BytesIO
 import base64
 from dotenv import load_dotenv
 
-# Inisialisasi client
+# Initialize client
 load_dotenv()
 client = genai.Client()
 
-# Ambil input dari pengguna setelah program dijalankan
+# Get user input after the program starts
 contents = input("Describe the image you want Gemini to generate: ")
 
-# Kirim permintaan ke model
+# Send request to the model
 response = client.models.generate_content(
     model="gemini-2.0-flash-preview-image-generation",
     contents=contents,
@@ -21,7 +21,7 @@ response = client.models.generate_content(
     )
 )
 
-# Tampilkan hasil
+# Display the result
 for part in response.candidates[0].content.parts:
     if part.text is not None:
         print(part.text)
