@@ -10,7 +10,7 @@ load_dotenv()
 client = genai.Client()
 
 contents = ('Hi, can you create a 3d rendered image of a pig '
-            'with wings and a top hat flying over a happy '
+            'with wings and a top hat flying with other animal over a happy '
             'futuristic scifi city with lots of greenery?')
 
 response = client.models.generate_content(
