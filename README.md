@@ -5,24 +5,19 @@
 ### Create Virtual Environment
 
 ```bash
-python3 -m venv ~/.venv/gemini-api
+python3 -m venv ./venv
+
 ```
 
-### Activate Virtual Environment
+### Activate Virtual Environment & Install Dependencies
 
 ```bash
-source ~/.venv/gemini-api/bin/activate.fish
+source ./venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### Deactivate Virtual Environment
 
 ```bash
 deactivate
-```
-
-## Install Dependencies
-
-```bash
-pip install -q -U google-genai
-pip install google-generativeai python-dotenv Pillow requests
 ```
